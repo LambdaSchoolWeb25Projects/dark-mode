@@ -1,12 +1,19 @@
 import { useState } from 'react';
 
-export const useInput = (key, initialValue) => {
-    const [value, setValue] = useLocalStorage(key, initialValue);
-    const handleChanges = updatedValue => {
-        setValue(updatedValue);
-    };
-    return [value, setValue, handleChanges];
-};
+//Custom hook
+
+//Control input dynamically
+
+//export const useInput = (key, initialValue) => {
+//     const [value, setValue] = useLocalStorage(key, initialValue);
+//     const handleChanges = updatedValue => {
+//         setValue(updatedValue);
+//     };
+//     return [value, setValue, handleChanges];
+// };
+
+
+//Set state in local storage
 
 export const useLocalStorage = (key, initialMode) => {
     const [storedMode, setStoredMode] = useState (() => {
